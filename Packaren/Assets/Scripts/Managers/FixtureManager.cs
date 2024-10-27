@@ -4,8 +4,8 @@ using UnityEngine;
 namespace Assets.Scripts.Managers {
     public class FixtureManager:MonoBehaviour
     {
-        public GameObject fixturePrefab;
-        private GameObject fixtureInstance;
+        public Fixture fixture;
+        private Fixture fixtureInstance;
 
         private void OnEnable()
         {
@@ -21,9 +21,11 @@ namespace Assets.Scripts.Managers {
         {
             if(fixtureInstance == null)
             {
-                fixtureInstance = Instantiate(fixturePrefab, new Vector3(0, 0, 0), Quaternion.identity);
+                fixtureInstance = Instantiate(fixture, new Vector3(0, 0, 0), Quaternion.identity);
                 AppStateManager.Instance.IsComponentGenerated = true;
                 Debug.Log("Fixture generated");
+
+                fixtureInstance.Initialize();
             }
             else{
                 Debug.Log("Fixture already exists");
