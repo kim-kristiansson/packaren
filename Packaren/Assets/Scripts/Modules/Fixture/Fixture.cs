@@ -6,8 +6,9 @@ public class Fixture : FacilityAsset
     public List<StickHole> ringHoles;
     public List<StickHole> plateHoles;
 
-    public void Initialize(bool useRings = false)
+    public override void Initialize(bool useRings = false)
     {
+        base.Initialize();
         if (useRings)
         {
             SpawnSticks(ringHoles);
