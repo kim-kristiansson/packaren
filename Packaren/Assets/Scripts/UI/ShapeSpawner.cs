@@ -1,13 +1,14 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class ShapeSpawner : MonoBehaviour
 {
-    [SerializeField] private InputField heightInputField;
-    [SerializeField] private InputField widthInputField;
-    [SerializeField] private InputField depthInputField;
-    [SerializeField] private InputField diameterInputField;
-    [SerializeField] private Dropdown shapeDropdown;
+    [SerializeField] private TMP_InputField heightInputField;
+    [SerializeField] private TMP_InputField widthInputField;
+    [SerializeField] private TMP_InputField depthInputField;
+    [SerializeField] private TMP_InputField diameterInputField;
+    [SerializeField] private TMP_Dropdown shapeDropdown;
     [SerializeField] private Button spawnButton;
 
     private ShapeFactory shapeFactory;
