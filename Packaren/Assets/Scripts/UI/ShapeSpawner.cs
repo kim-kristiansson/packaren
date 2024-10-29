@@ -27,7 +27,7 @@ public class ShapeSpawner : MonoBehaviour
         string shapeType = shapeDropdown.options[shapeDropdown.value].text;
 
         heightInputField.gameObject.SetActive(true);
-        widthInputField.gameObject.SetActive(shapeType == "Cylinder");
+        widthInputField.gameObject.SetActive(shapeType == "Cuboid");
         depthInputField.gameObject.SetActive(shapeType == "Cuboid");
         diameterInputField.gameObject.SetActive(shapeType == "Cylinder");
     }
