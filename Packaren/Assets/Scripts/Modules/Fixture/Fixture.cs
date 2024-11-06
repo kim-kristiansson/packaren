@@ -9,6 +9,7 @@ public class Fixture : FacilityAsset
     public override void Initialize(bool useRings = false)
     {
         base.Initialize();
+        
         if (useRings)
         {
             SpawnSticks(ringHoles);
